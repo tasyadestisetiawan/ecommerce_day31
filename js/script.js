@@ -40,24 +40,23 @@ document.addEventListener("click", function (e) {
 });
 
 // Modal box
-const itemDetailModal = document.querySelector('#item-detail-modal');
-const itemDetailButtons = document.querySelectorAll('.item-detail-button');
+const itemDetailModal = document.querySelector("#item-detail-modal");
+const itemDetailButtons = document.querySelectorAll(".item-detail-button");
 
-itemDetailButtons.forEach((btn)=>{
+itemDetailButtons.forEach((btn) => {
   btn.onclick = (e) => {
     itemDetailModal.style.display = "flex";
     e.preventDefault();
   };
-})
+});
 
-
-document.querySelector('.modal .close-icon').onclick = (e) => {
+document.querySelector(".modal .close-icon").onclick = (e) => {
   itemDetailModal.style.display = "none";
   e.preventDefault();
 };
 
-window.onclick=(e)=>{
-  if (e.target===itemDetailModal){
-    itemDetailModal.style.display='none';
+window.onclick = (e) => {
+  if (e.target === itemDetailModal) {
+    itemDetailModal.style.display = "none";
   }
 };
